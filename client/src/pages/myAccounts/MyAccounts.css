@@ -1,0 +1,266 @@
+/* MyAccounts.css */
+
+.accounts-container {
+  background-color: white;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.accounts-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.accounts-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.accounts-subtitle {
+  font-size: 1.125rem;
+  color: #718096;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #718096;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #718096;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.empty-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a5568;
+  margin: 0 0 1rem 0;
+}
+
+.empty-description {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Accounts Grid */
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.account-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.account-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Media Section */
+.account-media {
+  position: relative;
+  background: #f8f9fa;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.media-item {
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.media-image,
+.media-video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.media-video {
+  background: #000;
+}
+
+.no-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  color: #a0aec0;
+}
+
+.no-media-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Account Content */
+.account-content {
+  padding: 1.5rem;
+}
+
+.account-description {
+  margin-bottom: 1.5rem;
+}
+
+.description-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.75rem 0;
+}
+
+.description-text {
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.account-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+}
+
+.price-label {
+  font-size: 0.875rem;
+  color: #718096;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.price-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .accounts-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .accounts-title {
+    font-size: 2rem;
+  }
+  
+  .accounts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .media-image,
+  .media-video {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accounts-header {
+    margin-bottom: 2rem;
+  }
+  
+  .accounts-title {
+    font-size: 1.75rem;
+  }
+  
+  .account-content {
+    padding: 1rem;
+  }
+  
+  .media-grid {
+    padding: 0.75rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.account-card {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.account-card:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.account-card:nth-child(3n) {
+  animation-delay: 0.2s;
+}
