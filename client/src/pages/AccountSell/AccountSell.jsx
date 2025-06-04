@@ -4,6 +4,7 @@ import api from '../../api';
 import Navbar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
 
+// Account sell
 const AccountSell = () => {
 
   const [error, setError] = useState('');
