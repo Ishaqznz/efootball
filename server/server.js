@@ -17,6 +17,8 @@ app.use(session({
   }
 }));
 
+// cors policy
+
 app.use(cors({
     origin: process.env.CLIENT_URL || 'https://efootballclient2.vercel.app',
     credentials: true
