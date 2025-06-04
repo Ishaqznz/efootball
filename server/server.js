@@ -6,6 +6,12 @@ const cors = require('cors')
 const connectDB = require('./Config/connectDB')
 const session = require('express-session');
 
+// cors policy
+app.use(cors({
+    origin: 'https://efootballclient2.vercel.app' || process.env.CLIENT_URL,
+    credentials: true
+}))
+
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -16,12 +22,6 @@ app.use(session({
     httpOnly: true
   }
 }));
-
-// cors policy
-app.use(cors({
-    origin: process.env.CLIENT_URL || 'https://efootballclient2.vercel.app',
-    credentials: true
-}))
 
 
 app.use(express.json())
