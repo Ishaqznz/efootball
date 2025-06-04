@@ -1,6 +1,6 @@
 import React from 'react'
 import './UserProfile.css'
-import userContext from '../../context/userContext'
+import userContext from '../../context/UserContext'
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import api from '../../api';

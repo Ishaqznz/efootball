@@ -1,6 +1,6 @@
 import React from 'react'
 import './MyAccounts.css';
-import userContext from '../../context/userContext'
+import userContext from '../../context/UserContext'
 import { useContext } from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';

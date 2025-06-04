@@ -8,7 +8,7 @@ import AccountDetails from './pages/AcountDetails/AccountDetails'
 import { createContext } from "react";
 import { useEffect } from "react";
 import api from './api';
-import { UserProvider } from "./context/userContext";
+import { UserProvider } from "./context/UserContext";
 import MyAccounts from "./pages/myAccounts/myAccounts";
 import UserProfile from "./pages/UserProfile/UserProfile";
 

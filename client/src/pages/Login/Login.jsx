@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Login.css'
 import api from '../../api';
 import { useNavigate } from 'react-router-dom';
-import userContext from '../../context/userContext';
+import userContext from '../../context/UserContext';
 import { useContext } from 'react';
 import Navbar from '../../components/NavBar/NavBar';
 import Footer from '../../components/Footer/Footer';
