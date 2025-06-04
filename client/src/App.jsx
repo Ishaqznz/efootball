@@ -9,7 +9,7 @@ import { createContext } from "react";
 import { useEffect } from "react";
 import api from './api';
 import { UserProvider } from "./context/UserContext";
-import MyAccounts from "./pages/myAccounts/myAccounts";
+import MyAccounts from "./pages/myAccounts/MyAccounts";
 import UserProfile from "./pages/UserProfile/UserProfile";
 
 function App() {

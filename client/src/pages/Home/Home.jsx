@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react'
 import './Home.css'
 import Navbar from '../../components/NavBar/NavBar';
 import Cards from '../../components/Cards/Cards';
-import api from '../../api';
 import userContext from '../../context/UserContext';
 import Footer from '../../components/Footer/Footer';
 
